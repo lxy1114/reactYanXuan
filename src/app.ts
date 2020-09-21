@@ -1,6 +1,9 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import './app.less'
 import 'taro-ui/dist/style/index.scss'
+import getParams from './utils/util.js'
+
+React.$getParams = getParams
 
 class App extends Component {
 

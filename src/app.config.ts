@@ -1,6 +1,7 @@
 export default {
   pages: [
-    'pages/home/home'
+    'pages/home/home',
+	 'pages/detail/detail'
   ],
   window: {
     backgroundTextStyle: 'light',

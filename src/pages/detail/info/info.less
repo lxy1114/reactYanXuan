@@ -1,0 +1,44 @@
+.content{
+  padding: 30px;
+}
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title{
+  width: 580px;
+  font-size: 28px;
+  color: #999999;
+  &-name{
+    font-size: 32px;
+    color: #333333;
+    font-weight: bold;
+  }
+}
+.tag{
+  font-size: 28px;
+  color: #666666;
+  &-num{
+    font-size: 32px;
+    color: red;
+    font-weight: bold;
+  }
+}
+.price{
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30px;
+  &-num{
+    font-size: 32px;
+    color: red;
+    font-weight: bold;
+  }
+  &-num:nth-child(2){
+    font-size: 24px;
+    color: #999999;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-left: 20px;
+  }
+}

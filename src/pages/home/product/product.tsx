@@ -8,12 +8,18 @@ class Product extends Component {
       list: []
     }
 
+	  goDetail(id) {
+      Taro.navigateTo({
+        url: '/pages/detail/detail?id='+id
+      })
+	  }
+
     render() {
         var list = this.props.list
         return(
             <View className="product">
               {list.filter(item => item.type == 1).map((item) => (
-                <View className="list" key={item.id}>
+                <View className="list" key={item.id} onClick={() => this.goDetail(item.categoryItem.id)}>
                   <Image className="list-banner" src={item.categoryItem.listPicUrl}></Image>
                   <View className="label">{item.categoryItem.simpleDesc}</View>
                   {
