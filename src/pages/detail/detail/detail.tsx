@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
-import { RichText } from '@tarojs/components'
+import { View, RichText } from '@tarojs/components'
 import './detail.less'
 
-export default class infoDetail extends Component {
+export default class InfoDetail extends Component {
   static DefaultProps = {
     html: ''
   }
 
   render() {
-    const { html } = this.props
+    let { html } = this.props
+    html = html.replace(new RegExp('style=""','g'),'style="display:flex;width: 100%;"')
     return(
-      <RichText nodes={html}></RichText>
+      <View className="box">
+        <RichText nodes={html}></RichText>
+      </View>
     )
   }
 }

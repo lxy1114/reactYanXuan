@@ -1,5 +1,7 @@
-const getParams = (url) => {
+import Taro from '@tarojs/taro'
+export function getParams(url){
   var obj = {}
+  if(url.indexOf('?') == -1) return
   url = url.split('?')[1].split('&')
   for(var i in url){
     var name = url[i].split('=')[0]
@@ -9,4 +11,9 @@ const getParams = (url) => {
   return obj
 }
 
-export default getParams
+export function toast(msg){
+  Taro.showToast({
+    title: msg,
+    icon: 'none'
+  })
+}

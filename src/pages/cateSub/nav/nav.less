@@ -1,0 +1,26 @@
+.subnav{
+	line-height: 80px;
+	white-space: nowrap;
+	overflow-x: scroll;
+  border-bottom: 2px solid #EEEEEE;
+	font-size: 28px;
+	color: #333333;
+	&-list{
+    display: inline-block;
+		padding: 0rpx 30rpx;
+	}
+  &-list.subnav-list1{
+    color: #ab2b2b;
+    position: relative;
+  }
+  &-list.subnav-list1::after{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: #ab2b2b;
+    position: absolute;
+    bottom: 0px;
+    left: 8%;
+  }
+}

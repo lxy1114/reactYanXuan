@@ -9,7 +9,6 @@ export default class DetailInfo extends Component {
 
   render() {
     const { info } = this.props
-    console.log(info.itemStar)
     return(
       <View className="content">
         <View className="info">
@@ -29,6 +28,17 @@ export default class DetailInfo extends Component {
             info.activityPrice && <View className="price-num">{'￥'+info.activityPrice}</View>
           }
           <View className="price-num">{'￥'+info.retailPrice}</View>
+        </View>
+        <View className="recommend">
+          <View className="recommend-title">推荐理由</View>
+          <View className="recommend-con">
+            {info.recommendReasons && info.recommendReasons.map((item,index) => (
+              <View className="recommend-list">
+                <View className="recommend-list-index">{index+1}</View>
+                <View className="recommend-list-text">{item}</View>
+              </View>
+            ))}
+          </View>
         </View>
       </View>
     )

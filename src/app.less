@@ -1,22 +1,89 @@
 .content{
     padding: 0px 30px;
 }
-.placeholder{
-    font-size: 24px;
-}
+//页面剧中标题
 .centerTitle{
     text-align: center;
     font-size: 28px;
     font-weight: bold;
     margin: 30px auto;
 }
+//页面中间分割线
 .line{
   width: 100%;
   height: 20px;
   background: #fafafa;
 }
+//页面加粗标题
 .page-title{
   font-size: 28px;
   color: #333333;
   margin: 30px 0px 0px 30px;
+}
+//弹出层遮罩
+.mask{
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+//隐藏滚动条
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.require{
+  display: inline-block;
+  color: #ab2b2b;
+  margin-right: 10px;
+}
+.reslist{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 690px;
+  height: 100px;
+  margin: 0px auto;
+  font-size: 28px;
+  color: #333333;
+  border-bottom: 2px solid #EEEEEE;
+  &-input{
+    width: 500px;
+    text-align: right;
+    &-more{
+      width: 16px;
+      height: 18px;
+      margin-left: 10px;
+    }
+  }
+}
+.moretext{
+  color: #666666;
+}
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #666666;
+}
+.padding{
+  padding: 10px 30px;
+}
+.nolist{
+  margin: 100px auto;
+  font-size: 28px;
+  color: #8a8a8a;
+  text-align: center;
+  &-img{
+    display: block;
+    width: 400px;
+    margin: 0px auto 30px;
+  }
+}
+.none{
+  display: none;
 }

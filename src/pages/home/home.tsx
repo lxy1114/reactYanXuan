@@ -6,6 +6,8 @@ import Banner from './banner/banner'
 import Search from './search/search'
 import Product from './product/product'
 import Loading from '../../components/loading/loading'
+import Footer from '../../components/footer/footer'
+import { request } from '../../utils/request.js'
 class Home extends Component {
   constructor(props) {
     super(props)
@@ -27,28 +29,32 @@ class Home extends Component {
       bottom: bottom,
       loading: bottom
     })
-    Taro.request({
-      url: 'https://miniapp.you.163.com/xhr/rcmd/index.json',
-      method: 'GET',
-      data: {
-          lastItemId: 0 || this.state.lastItem && this.state.lastItem.id,
-          size: 20
-      },
-      header: {
-          'content-type': 'application/json' // 默认值
-      },
-      success:(res) => {
-        console.log(res)
-        if(res.data.code == 200){
-          this.setState({
-              recommendList: this.state.recommendList.concat(res.data.data.rcmdItemList),
-              lastItem: res.data.data.rcmdItemList[res.data.data.rcmdItemList.length-1],
-              loading: false,
-              hasMore: res.data.data.hasMore
-          })
-        }
-      }
+    // Taro.request({
+    //   url: 'https://miniapp.you.163.com/xhr/rcmd/index.json',
+    //   method: 'GET',
+    //   data: {
+    //       lastItemId: 0 || this.state.lastItem && this.state.lastItem.id,
+    //       size: 20
+    //   },
+    //   header: {
+    //       'content-type': 'application/json' // 默认值
+    //   },
+    //   success:(res) => {
+    //     if(res.data.code == 200){
+    //       this.setState({
+    //           recommendList: this.state.recommendList.concat(res.data.data.rcmdItemList),
+    //           lastItem: res.data.data.rcmdItemList[res.data.data.rcmdItemList.length-1],
+    //           loading: false,
+    //           hasMore: res.data.data.hasMore
+    //       })
+    //     }
+    //   }
+    // })
+    const data = await request('/xhr/rcmd/index.json',{
+      lastItemId: 0 || this.state.lastItem && this.state.lastItem.id,
+       size: 20
     })
+    console.log(data)
   }
 
   componentDidMount() {
@@ -74,6 +80,7 @@ class Home extends Component {
             bottom && <Loading loading={loading}></Loading>
           }
         </ScrollView>
+        <Footer navIndex="0"/>
       </View>
     )
   }

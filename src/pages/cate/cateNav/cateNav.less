@@ -1,0 +1,23 @@
+.cateNav{
+  width: 120px;
+  font-size: 30px;
+  color: #333333;
+  line-height: 70px;
+  padding: 0px 30px;
+  position: fixed;
+  top: 0px;
+  &-list{
+    color: #ab2b2b;
+    position: relative;
+  }
+  &-list::before{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 40px;
+    background: #ab2b2b;
+    position: absolute;
+    top: 15px;
+    left: -30px;
+  }
+}

@@ -1,0 +1,41 @@
+.deploylist{
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  border-bottom: 2px solid #DDDDDD;
+  font-size: 24px;
+  color: #333333;
+  position: relative;
+  &-title{
+    color: #999999;
+    margin-right: 30px;
+  }
+}
+.deploylist:nth-last-child(1){
+  margin-bottom: 30px;
+}
+.server{
+  display: inline-block;
+}
+.serverList{
+  display: flex;
+  align-items: center;
+  &-round{
+    width: 8px;
+    height: 8px;
+    background: #ab2b2b;
+    border-radius: 100%;
+    margin-right: 8px;
+  }
+}
+.serverList:nth-child(1){
+  margin-bottom: 8px;
+}
+.more{
+  width: 16px;
+  height: 28px;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  margin-top: -14px;
+}

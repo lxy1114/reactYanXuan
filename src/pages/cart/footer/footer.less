@@ -1,0 +1,47 @@
+.cartfoot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 80px;
+  background: #FFFFFF;
+  position: fixed;
+  bottom: 96px;
+  &-all{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    &-check{
+      width: 31px;
+      height: 31px;
+      border: 2px solid #DDDDDD;
+      border-radius: 100%;
+      margin-right: 15px;
+    }
+    &-check.check{
+      width: 35px;
+      height: 35px;
+      border-style: none;
+    }
+  }
+}
+.carttotal{
+  display: flex;
+  &-title{
+    display: flex;
+    color: #333333;
+  }
+  &-money{
+    font-size: 40px;
+    color: #ab2b2b;
+    font-weight: bold;
+    margin: 0px 30px 0px 10px;
+  }
+  &-btn{
+    width: 250px;
+    height: 100%;
+    background: #ab2b2b;
+    color: #FFFFFF;
+    text-align: center;
+  }
+}

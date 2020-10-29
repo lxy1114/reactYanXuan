@@ -1,0 +1,130 @@
+.select{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  max-height: 1000px;
+  overflow-y: scroll;
+  background: #FFFFFF;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 9;
+}
+.fixed{
+  width: 690px;
+  background: #FFFFFF;
+  position: fixed;
+}
+.close{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.top{
+  display: flex;
+  align-items: flex-end;
+  &-banner{
+    width: 180px;
+    height: 180px;
+    background: #fafafa;
+  }
+  &-info{
+    margin-left: 30px;
+    font-size: 28px;
+    color: #333333;
+    &-money{
+      display: flex;
+    }
+  }
+}
+.money{
+  color: red;
+}
+.money:nth-child(2){
+  color: #999999;
+  text-decoration: line-through;
+  margin-left: 20px;
+}
+.params,.num{
+  font-size: 28px;
+  color: #333333;
+  margin-top: 30px;
+}
+.params{
+  margin-top: 200px;
+}
+.num{
+  margin-bottom: 120px;
+}
+.classify{
+  display: inline-block;
+  padding: 20px 30px;
+  border: 2px solid #777777;
+  margin: 30px 20px 0px;
+}
+.classify.classify-select{
+  color: #ab2b2b;
+  border-color: #ab2b2b;
+}
+.num-con{
+  display: flex;
+  align-items: center;
+  margin: 30px 0px 30px 0px;
+  .reduce,.add{
+    width: 80px;
+    height: 70px;
+    line-height: 70px;
+    border: 2px solid #777777;
+    text-align: center;
+  }
+  .total{
+    width: 100px;
+    height: 70px;
+    line-height: 70px;
+    border-top: 2px solid #777777;
+    border-bottom: 2px solid #777777;
+    text-align: center;
+  }
+}
+.reduce.reduce1,.add.add1{
+  color: #999999;
+  border-color: #999999;
+}
+.limitCount{
+  font-size: 24px;
+  color: #333333;
+  margin-left: 30px;
+}
+.selectbut{
+  display: flex;
+  justify-content: space-between;
+  width: 690px;
+  margin: 40px 0px 0px;
+  position: fixed;
+  bottom: 20px;
+  &-text{
+    width: 45%;
+    height: 70px;
+    line-height: 70px;
+    background: #DFA432;
+    border-radius: 80px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+  }
+  &-text:nth-last-child(1){
+    background: #ab2b2b;
+  }
+}
+.select-sure{
+  width: 690px;
+  line-height: 80px;
+  background: #ab2b2b;
+  margin: 40px 0px 0px;
+  color: #FFFFFF;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+}

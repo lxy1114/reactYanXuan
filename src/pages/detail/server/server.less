@@ -1,0 +1,32 @@
+.serverCon{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 30px 0px 60px;
+  background: #FFFFFF;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+}
+.popupList{
+  font-size: 24px;
+  color: #333333;
+  &-title{
+    position: relative;
+  }
+  &-title::before{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #ab2b2b;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    left: -30px;
+  }
+  &-text{
+    color: #999999;
+    margin: 16px 0px 30px;
+  }
+}
